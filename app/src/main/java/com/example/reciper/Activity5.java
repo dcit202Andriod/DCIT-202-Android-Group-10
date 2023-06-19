@@ -1,16 +1,22 @@
 package com.example.reciper;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.ClipData;
 import android.os.Bundle;
 
 import com.example.reciper.Models.MyRecipeData;
 import com.example.reciper.Models.RecipeAdapter;
 
-public class Activity5 extends AppCompatActivity {
+import java.util.ArrayList;
+import java.util.List;
 
+public class  Activity5 extends AppCompatActivity {
+    private SearchView searchView;
+    private List<item> itemList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +24,23 @@ public class Activity5 extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        searchView = findViewById(R.id.searchView);
+        searchView.clearFocus();
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                fileList(newText);
+                return true;
+            }
+        });
+        /*recyclerView = findViewById(R.id.)
+
+itemList.add(new Item())*/
 
         MyRecipeData[] myRecipeData = new MyRecipeData[]{
                 new MyRecipeData("Cheese Burger",R.drawable.cheeseburger),
@@ -29,6 +52,11 @@ public class Activity5 extends AppCompatActivity {
         };
         RecipeAdapter recipeAdapter = new RecipeAdapter(myRecipeData, Activity5.this);
         recyclerView.setAdapter(recipeAdapter);
+    }
+
+    private void fileList(String Text) {
+        List<item> filteredList = new ArrayList<>();
+        for(item item: itemList)
     }
 }
 
