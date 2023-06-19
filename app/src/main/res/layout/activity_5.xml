@@ -7,22 +7,13 @@
     android:gravity="center_horizontal"
     android:orientation="vertical"
     tools:context=".Activity5">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="@string/search"
-        android:textSize="40sp" />
+
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp">
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:autofillHints=""
-            android:drawableStart="@android:drawable/ic_menu_search"
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -32,281 +23,283 @@
             android:textAlignment="center"
             />
 
-        <androidx.appcompat.widget.SearchView
-            android:background="@drawable/edittext_background"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:hint="@string/search_your_recipes"
-            android:inputType="text"
-            android:textAlignment="center"
-            android:textColorHint="#757575"
-            tools:ignore="TextFields,TouchTargetSizeCheck,VisualLintTextFieldSize" />
+
     </androidx.cardview.widget.CardView>
-<!--
-    <TextView
+
+    <androidx.appcompat.widget.SearchView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:layout_marginBottom="10dp"
-        android:text="@string/recent_recipes1"
-        android:textSize="20sp"
-        tools:ignore="TextSizeCheck" />
+        android:layout_marginTop="30dp"
+        android:background="@drawable/edittext_background"
+        android:queryhint="search your recipes"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textColorHint="#757575"
+        tools:ignore="TextFields,TouchTargetSizeCheck,VisualLintTextFieldSize" />
 
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:orientation="vertical"
-        android:layout_height="wrap_content">
-
-        <androidx.cardview.widget.CardView
-            app:cardElevation="10dp"
-            app:cardCornerRadius="10dp"
-            android:layout_margin="10dp"
-            app:cardBackgroundColor="#FFFFFF"
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/recent_recipes1"
+            android:textSize="20sp"
+            tools:ignore="TextSizeCheck" />
 
-            <LinearLayout
-                android:layout_width="364dp"
-                android:layout_height="75dp"
-                android:orientation="horizontal"
-                android:background="@drawable/edittext_background">
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
 
-                <ImageView
-                    android:id="@+id/imageview"
-                    android:layout_width="63dp"
-                    android:layout_height="54dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/cheeseburger"
-                    android:importantForAccessibility="no" />
+            <androidx.cardview.widget.CardView
+                app:cardElevation="10dp"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="#FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    tools:ignore="InefficientWeight">
+                    android:layout_width="364dp"
+                    android:layout_height="75dp"
+                    android:orientation="horizontal"
+                    >
 
-                    <TextView
-                        android:id="@+id/textName"
-                        android:textColor="#000000"
-                        android:textSize="20sp"
+                    <ImageView
+                        android:id="@+id/imageview"
+                        android:layout_width="63dp"
+                        android:layout_height="54dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/cheeseburger"
+                        android:importantForAccessibility="no" />
+
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:text="Cheese Burger"
-                        tools:ignore="ExtraText,HardcodedText" />
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        tools:ignore="InefficientWeight">
+
+                        <TextView
+                            android:id="@+id/textName"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:text="Cheese Burger"
+                            tools:ignore="ExtraText,HardcodedText" />
 
 
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
 
 
-        <androidx.cardview.widget.CardView
-            app:cardElevation="10dp"
-            app:cardCornerRadius="10dp"
-            android:layout_margin="10dp"
-            app:cardBackgroundColor="#FFFFFF"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <LinearLayout
-                android:layout_width="364dp"
-                android:layout_height="75dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/imageview1"
-                    android:layout_width="63dp"
-                    android:layout_height="54dp"
-                    android:layout_gravity="center"
-                    android:importantForAccessibility="no"
-                    android:src="@drawable/currynoodles"
-                    tools:ignore="ImageContrastCheck" />
+            <androidx.cardview.widget.CardView
+                app:cardElevation="10dp"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="#FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    tools:ignore="InefficientWeight">
+                    android:layout_width="364dp"
+                    android:layout_height="75dp"
+                    android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/textName1"
-                        android:textColor="#000000"
-                        android:textSize="20sp"
+                    <ImageView
+                        android:id="@+id/imageview1"
+                        android:layout_width="63dp"
+                        android:layout_height="54dp"
+                        android:layout_gravity="center"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/currynoodles"
+                        tools:ignore="ImageContrastCheck" />
+
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:text="Curry Noodles"
-                        tools:ignore="HardcodedText" />
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        tools:ignore="InefficientWeight">
+
+                        <TextView
+                            android:id="@+id/textName1"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:text="Curry Noodles"
+                            tools:ignore="HardcodedText" />
 
 
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
 
 
-        <androidx.cardview.widget.CardView
-            app:cardElevation="10dp"
-            app:cardCornerRadius="10dp"
-            android:layout_margin="10dp"
-            app:cardBackgroundColor="#FFFFFF"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <LinearLayout
-                android:layout_width="364dp"
-                android:layout_height="75dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/imageview3"
-                    android:layout_width="63dp"
-                    android:layout_height="54dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/pancakes"
-                    android:importantForAccessibility="no" />
+            <androidx.cardview.widget.CardView
+                app:cardElevation="10dp"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="#FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    tools:ignore="InefficientWeight">
+                    android:layout_width="364dp"
+                    android:layout_height="75dp"
+                    android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/textName3"
-                        android:textColor="#000000"
-                        android:textSize="20sp"
+                    <ImageView
+                        android:id="@+id/imageview3"
+                        android:layout_width="63dp"
+                        android:layout_height="54dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/pancakes"
+                        android:importantForAccessibility="no" />
+
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:text="Pan Cakes"
-                        tools:ignore="HardcodedText" />
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        tools:ignore="InefficientWeight">
+
+                        <TextView
+                            android:id="@+id/textName3"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:text="Pan Cakes"
+                            tools:ignore="HardcodedText" />
 
 
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
 
-        <androidx.cardview.widget.CardView
-            app:cardElevation="10dp"
-            app:cardCornerRadius="10dp"
-            android:layout_margin="10dp"
-            app:cardBackgroundColor="#FFFFFF"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <LinearLayout
-                android:layout_width="364dp"
-                android:layout_height="75dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/imageview2"
-                    android:layout_width="63dp"
-                    android:layout_height="54dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/noodles"
-                    android:importantForAccessibility="no" />
+            <androidx.cardview.widget.CardView
+                app:cardElevation="10dp"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="#FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    tools:ignore="InefficientWeight">
+                    android:layout_width="364dp"
+                    android:layout_height="75dp"
+                    android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/textName2"
-                        android:textColor="#000000"
-                        android:textSize="20sp"
+                    <ImageView
+                        android:id="@+id/imageview2"
+                        android:layout_width="63dp"
+                        android:layout_height="54dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/noodles"
+                        android:importantForAccessibility="no" />
+
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:text="Noodles"
-                        tools:ignore="HardcodedText" />
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        tools:ignore="InefficientWeight">
+
+                        <TextView
+                            android:id="@+id/textName2"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:text="Noodles"
+                            tools:ignore="HardcodedText" />
 
 
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
 
-        <androidx.cardview.widget.CardView
-            app:cardElevation="10dp"
-            app:cardCornerRadius="10dp"
-            android:layout_margin="10dp"
-            app:cardBackgroundColor="#FFFFFF"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <LinearLayout
-                android:layout_width="364dp"
-                android:layout_height="75dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/imageview4"
-                    android:layout_width="63dp"
-                    android:layout_height="54dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/salad"
-                    android:importantForAccessibility="no" />
+            <androidx.cardview.widget.CardView
+                app:cardElevation="10dp"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="#FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    tools:ignore="InefficientWeight">
+                    android:layout_width="364dp"
+                    android:layout_height="75dp"
+                    android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/textName4"
-                        android:textColor="#000000"
-                        android:textSize="20sp"
+                    <ImageView
+                        android:id="@+id/imageview4"
+                        android:layout_width="63dp"
+                        android:layout_height="54dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/salad"
+                        android:importantForAccessibility="no" />
+
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:text="Cheese and Shell Salad "
-                        tools:ignore="HardcodedText" />
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        tools:ignore="InefficientWeight">
+
+                        <TextView
+                            android:id="@+id/textName4"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:text="Cheese and Shell Salad "
+                            tools:ignore="HardcodedText" />
 
 
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
-            </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-        </androidx.cardview.widget.CardView>
+        </LinearLayout>
 
-    </LinearLayout>
-
-<!--    <androidx.recyclerview.widget.RecyclerView-->
+    <!--    <androidx.recyclerview.widget.RecyclerView-->
     <!--        android:id="@+id/recyclerView"-->
     <!--        android:layout_gravity="start"-->
     <!--        android:layout_width="wrap_content"-->
