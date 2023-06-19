@@ -6,20 +6,20 @@ import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.ClipData;
 import android.os.Bundle;
 
 import com.example.reciper.Models.MyRecipeData;
 import com.example.reciper.Models.RecipeAdapter;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class  Activity5 extends AppCompatActivity {
     private SearchView searchView;
     private RecipeAdapter recipeAdapter;
     private RecyclerView recyclerView;
 
+    public Activity5(RecipeAdapter recipeAdapter, RecyclerView recyclerView) {
+        this.recipeAdapter = recipeAdapter;
+        this.recyclerView = recyclerView;
+    }
 
 
     @Override
@@ -40,7 +40,7 @@ public class  Activity5 extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                fileList(newText);
+                fileList();
                 return true;
             }
         });
