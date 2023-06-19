@@ -17,6 +17,10 @@ import java.util.List;
 
 public class  Activity5 extends AppCompatActivity {
     private SearchView searchView;
+    private RecipeAdapter recipeAdapter;
+    private RecyclerView recyclerView;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
