@@ -17,11 +17,12 @@ import java.util.List;
 
 public class  Activity5 extends AppCompatActivity {
     private SearchView searchView;
-    private List<item> itemList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_5);
+
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -39,9 +40,7 @@ public class  Activity5 extends AppCompatActivity {
                 return true;
             }
         });
-        /*recyclerView = findViewById(R.id.)
 
-itemList.add(new Item())*/
 
         MyRecipeData[] myRecipeData = new MyRecipeData[]{
                 new MyRecipeData("Cheese Burger",R.drawable.cheeseburger),
@@ -55,10 +54,7 @@ itemList.add(new Item())*/
         recyclerView.setAdapter(recipeAdapter);
     }
 
-    private void fileList(String Text) {
-        List<item> filteredList = new ArrayList<>();
-        for(item item: itemList)
-    }
+
 }
 
 
