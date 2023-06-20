@@ -119,7 +119,7 @@
 
 
     <com.google.android.material.button.MaterialButton
-        android:layout_width="330dp"
+        android:layout_width="329dp"
         android:layout_height="70dp"
         android:id="@+id/login_button"
         android:layout_below="@+id/password_card"
@@ -164,23 +164,22 @@
 
     <com.google.android.material.button.MaterialButton
 
-        android:layout_width="330dp"
+        android:layout_width="329dp"
         android:layout_height="70dp"
         android:id="@+id/google_login_button"
         android:layout_below="@+id/create_account"
         android:text="Login with Google"
+        android:drawableLeft="@drawable/google"
         android:textSize="20sp"
         android:textStyle="bold"
-
         android:paddingStart="55dp"
         android:paddingRight="55dp"
         app:cornerRadius="10dp"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
-       android:drawablePadding="1000dp"
         android:backgroundTint="#F06155"
         android:textColor="@color/white"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
        />
 
 

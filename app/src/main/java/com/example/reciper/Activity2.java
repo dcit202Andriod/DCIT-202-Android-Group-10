@@ -1,5 +1,7 @@
 package com.example.reciper;
 
+
+//Imported Dependencies
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -36,7 +38,7 @@ public class Activity2 extends AppCompatActivity {
                 }
             }
         });
-
+//Intent for the button'Create Account'(It takes you to activity3)
         ImageButton goToActivityButton = findViewById(R.id.create_account);
         goToActivityButton.setOnClickListener(new View.OnClickListener() {
             @Override
