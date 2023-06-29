@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Reciper</string>
+    <string name="all">All</string>
+    <string name="unread">Unread</string>
+    <string name="read">Read</string>
+    <string name="notifications">Notifications</string>
 </resources>
