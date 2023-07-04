@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:text="Popular Recipes 🔥"
         android:textSize="40dp"
+        android:id="@+id/popular_Recipe_title"
         android:textStyle="bold"
         android:layout_gravity="center"
         android:paddingVertical="10dp"/>
@@ -17,6 +18,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/list_item"
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         />
