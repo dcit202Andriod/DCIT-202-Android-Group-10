@@ -9,32 +9,36 @@
 
 
     <TextView
+        android:id="@+id/login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/login"
-        android:text="Login"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:text="@string/string1"
         android:textColor="@color/black"
         android:textSize="35sp"
-        android:textStyle="bold"
-        android:layout_margin="50dp"
-        android:gravity="center"/>
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/email_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/login"
         android:layout_marginStart="50dp"
         android:layout_marginTop="0dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="50dp"
-        android:layout_below="@+id/login"
-        android:text="Email"
+        android:text="@string/string2"
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold" />
 
     <EditText
         android:id="@+id/Email"
+        android:autofillHints="email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/login"
@@ -42,27 +46,27 @@
         android:layout_marginTop="18dp"
         android:layout_marginEnd="18dp"
         android:layout_marginBottom="18dp"
-        android:hint="Enter your email..."
+        android:drawableStart="@drawable/baseline_email_24"
+        android:drawablePadding="20dp"
+        android:drawableTint="@color/black"
+        android:hint="@string/string3"
         android:padding="28dp"
         android:textColor="@color/black"
         android:textColorHint="#808080"
-        android:textStyle="bold"
-        android:drawableLeft="@drawable/baseline_email_24"
-        android:drawablePadding="20dp"
-        android:drawableTint="@color/black"/>
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/password_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/Email"
         android:layout_marginStart="50dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="0dp"
-        android:layout_below="@+id/Email"
-        android:text="Password"
+        android:text="@string/string4"
         android:textColor="@color/black"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:textStyle="bold" />
 
 
@@ -75,24 +79,27 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="18dp"
         android:layout_marginBottom="18dp"
-        android:hint="Enter your Password..."
+        android:drawableStart="@drawable/baseline_key_24"
+        android:drawablePadding="20dp"
+        android:drawableTint="@color/black"
+        android:hint="@string/string5"
         android:padding="28dp"
         android:textColor="@color/black"
         android:textColorHint="#808080"
-        android:textStyle="bold"
-        android:drawableLeft="@drawable/baseline_key_24"
-        android:drawablePadding="20dp"
-        android:drawableTint="@color/black"/>
+        android:textStyle="bold" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/login_button"
         android:layout_below="@+id/Password"
-        android:text="Login"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
         android:backgroundTint="@color/black"
-        android:textColor="@color/white"
-        android:layout_margin="20dp"/>
+        android:text="@string/string1"
+        android:textColor="@color/white" />
 
     <TextView
         android:id="@+id/no_account"
@@ -104,7 +111,7 @@
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="0dp"
         android:gravity="center"
-        android:text="No Account?"
+        android:text="@string/string6"
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold" />
@@ -119,20 +126,23 @@
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="90dp"
         android:gravity="center"
-        android:text="Create Account"
+        android:text="@string/string7"
         android:textColor="#00ff00"
         android:textSize="18sp"
         android:textStyle="bold" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_google_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/login_google_button"
         android:layout_below="@+id/create_account"
-        android:text="Login with Google"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
         android:backgroundTint="#ff0000"
-        android:textColor="@color/white"
-        android:layout_margin="20dp"/>
+        android:text="@string/string8"
+        android:textColor="@color/white" />
 
 
 </RelativeLayout>
