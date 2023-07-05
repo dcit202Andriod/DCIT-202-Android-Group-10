@@ -7,14 +7,14 @@
     android:orientation="vertical"
     android:gravity="center_horizontal"
     tools:context=".MainActivity">
-
+<!--
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/search"
         android:textSize="40sp"
         android:layout_marginBottom="10dp"/>
-
+-->
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -31,7 +31,7 @@
             android:inputType="text"
             android:autofillHints="" />
     </androidx.cardview.widget.CardView>
-
+<!--
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -40,7 +40,7 @@
         android:text="@string/recent_recipes1"
         android:textSize="20sp"
         tools:ignore="TextSizeCheck" />
-
+-->
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
