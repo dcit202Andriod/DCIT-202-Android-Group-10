@@ -12,7 +12,7 @@
         android:layout_height="150dp"
         android:layout_marginHorizontal="20dp"
         android:layout_marginVertical="30dp"
-        android:id="@+id/food_Card"
+        android:id="@+id/food_Card_dinner"
         app:cardCornerRadius="10dp"
         app:cardElevation="5dp"
         >
@@ -20,14 +20,14 @@
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:id="@+id/food_image"
+            android:id="@+id/food_image_dinner"
             />
         <TextView
             android:layout_width="100dp"
             android:layout_height="30dp"
             android:layout_gravity="bottom"
             tools:text="Food Name"
-            android:id="@+id/food_name"
+            android:id="@+id/food_name_dinner"
             android:textAlignment="center"
             tools:ignore="RtlCompat" />
     </androidx.cardview.widget.CardView>
