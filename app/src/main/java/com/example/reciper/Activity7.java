@@ -11,38 +11,38 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 
-public class NotificationActivity extends AppCompatActivity {
+public class Activity7 extends AppCompatActivity {
 
     private static final int NOTIFICATION_ID = 1;
 
-    private Button allButton;
-    private Button readButton;
-    private Button unreadButton;
+    private Button buttonAll;
+    private Button buttonRead;
+    private Button buttonUnread;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_notification);
+        setContentView(R.layout.activity_7);
 
-        allButton = findViewById(R.id.all_button);
-        readButton = findViewById(R.id.read_button);
-        unreadButton = findViewById(R.id.unread_button);
+        buttonAll = findViewById(R.id.button4);
+        buttonRead = findViewById(R.id.button5);
+        buttonUnread = findViewById(R.id.button2);
 
-        allButton.setOnClickListener(new View.OnClickListener() {
+        buttonAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showNotification("All");
             }
         });
 
-        readButton.setOnClickListener(new View.OnClickListener() {
+        buttonRead.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showNotification("Read");
             }
         });
 
-        unreadButton.setOnClickListener(new View.OnClickListener() {
+        buttonUnread.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showNotification("Unread");
@@ -51,14 +51,14 @@ public class NotificationActivity extends AppCompatActivity {
     }
 
     private void showNotification(String category) {
-        // Create an explicit intent for the MainActivity
-        Intent intent = new Intent(this, MainActivity.class);
+        // Create an explicit intent for the Activity7
+        Intent intent = new Intent(this, Activity7.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_IMMUTABLE);
 
         // Build the notification
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "channel_id")
-                .setSmallIcon(R.drawable.notification_icon)
+                .setSmallIcon(android.R.drawable.ic_dialog_info) //
                 .setContentTitle("Notification Title")
                 .setContentText("This is the notification content for category: " + category)
                 .setContentIntent(pendingIntent)
