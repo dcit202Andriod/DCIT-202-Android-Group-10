@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Reciper</string>
+    <string name="all">All</string>
+    <string name="unread">Unread</string>
+    <string name="read">Read</string>
+    <string name="notifications">Notifications</string>
+    <string name="string1">Login</string>
+    <string name="string2">Email</string>
+    <string name="string3">Enter your email</string>
+    <string name="string4">Password</string>
+    <string name="string5">Enter your Password</string>
+    <string name="string6">No Account?</string>
+    <string name="string7">Create Account</string>
+    <string name="string8">Login with Google</string>
+</resources>
