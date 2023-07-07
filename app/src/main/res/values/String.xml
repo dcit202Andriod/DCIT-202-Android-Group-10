@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="search_title">Search</string>
+    <string name="search_button_label">Search your recipes...</string>
+    <string name="search_button_description">Search Button</string>
+    <string name="recent_recipes_title">Recent Recipes</string>
+    <string name="recent_recipes">Recent Recipes</string>
+
+
+</resources>
