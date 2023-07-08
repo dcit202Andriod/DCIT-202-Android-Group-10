@@ -83,7 +83,7 @@ public class Activity3 extends AppCompatActivity {
             }
         });
 
-
+//intent for back button(It takes you back to Activity2)
         ImageButton goToActivityButton = findViewById(R.id.back_button);
         goToActivityButton.setOnClickListener(new View.OnClickListener() {
             @Override
