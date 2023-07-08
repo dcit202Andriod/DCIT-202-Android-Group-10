@@ -7,5 +7,12 @@
     <string name="recent_recipes_title">Recent Recipes</string>
     <string name="recent_recipes">Recent Recipes</string>
 
+    <string-array name="recipes_names_full_txt">
+        <item>cheeseBurger</item>
+        <item>RockstarBurger</item>
+        <item>cheeseAndBaconBurger</item>
+        <item>SlackerBurger</item>
+    </string-array>
+
 
 </resources>
