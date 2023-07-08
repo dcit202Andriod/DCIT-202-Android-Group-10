@@ -4,15 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:gravity="center_horizontal"
-    tools:context=".MainActivity">
-
+    android:orientation="vertical"
+    tools:context=".Activity5">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="@string/search"
+        android:textSize="40sp" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:drawableStart="@android:drawable/ic_menu_search"
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -28,11 +38,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:hint="@string/search_your_recipes"
+            android:inputType="text"
             android:textAlignment="center"
             android:textColorHint="#757575"
-            tools:ignore="TextFields,TouchTargetSizeCheck,VisualLintTextFieldSize"
-            android:inputType="text"
-            android:autofillHints="" />
+            tools:ignore="TextFields,TouchTargetSizeCheck,VisualLintTextFieldSize" />
     </androidx.cardview.widget.CardView>
 <!--
     <TextView
@@ -43,7 +52,7 @@
         android:text="@string/recent_recipes1"
         android:textSize="20sp"
         tools:ignore="TextSizeCheck" />
--->
+
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
@@ -89,7 +98,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
-                        android:text="Recipe Name"/>
+                        android:text="Cheese Burger"
+                        tools:ignore="ExtraText,HardcodedText" />
 
 
 
@@ -119,8 +129,9 @@
                     android:layout_width="63dp"
                     android:layout_height="54dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/cheeseburger"
-                    android:importantForAccessibility="no" />
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/currynoodles"
+                    tools:ignore="ImageContrastCheck" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -137,55 +148,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
-                        android:text="Recipe Name"/>
-
-
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-
-
-        <androidx.cardview.widget.CardView
-            app:cardElevation="10dp"
-            app:cardCornerRadius="10dp"
-            android:layout_margin="10dp"
-            app:cardBackgroundColor="#FFFFFF"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <LinearLayout
-                android:layout_width="364dp"
-                android:layout_height="75dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/imageview2"
-                    android:layout_width="63dp"
-                    android:layout_height="54dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/cheeseburger"
-                    android:importantForAccessibility="no" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    tools:ignore="InefficientWeight">
-
-                    <TextView
-                        android:id="@+id/textName2"
-                        android:textColor="#000000"
-                        android:textSize="20sp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:text="Recipe Name"/>
+                        android:text="Curry Noodles"
+                        tools:ignore="HardcodedText" />
 
 
 
@@ -215,7 +179,7 @@
                     android:layout_width="63dp"
                     android:layout_height="54dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/cheeseburger"
+                    android:src="@drawable/pancakes"
                     android:importantForAccessibility="no" />
 
                 <LinearLayout
@@ -233,7 +197,56 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
-                        android:text="Recipe Name"/>
+                        android:text="Pan Cakes"
+                        tools:ignore="HardcodedText" />
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            app:cardElevation="10dp"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="364dp"
+                android:layout_height="75dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageview2"
+                    android:layout_width="63dp"
+                    android:layout_height="54dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/noodles"
+                    android:importantForAccessibility="no" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    tools:ignore="InefficientWeight">
+
+                    <TextView
+                        android:id="@+id/textName2"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Noodles"
+                        tools:ignore="HardcodedText" />
 
 
 
@@ -262,7 +275,7 @@
                     android:layout_width="63dp"
                     android:layout_height="54dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/cheeseburger"
+                    android:src="@drawable/salad"
                     android:importantForAccessibility="no" />
 
                 <LinearLayout
@@ -280,7 +293,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
-                        android:text="burger"/>
+                        android:text="Cheese and Shell Salad "
+                        tools:ignore="HardcodedText" />
 
 
 
@@ -293,11 +307,11 @@
     </LinearLayout>
 
 <!--    <androidx.recyclerview.widget.RecyclerView-->
-<!--        android:id="@+id/recyclerView"-->
-<!--        android:layout_gravity="start"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_margin="2dp" />-->
+    <!--        android:id="@+id/recyclerView"-->
+    <!--        android:layout_gravity="start"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_margin="2dp" />-->
 
 
 </LinearLayout>
