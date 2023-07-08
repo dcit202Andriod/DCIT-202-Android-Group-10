@@ -19,7 +19,7 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 
-public class PopularRecipeAdapter extends RecyclerView.Adapter<PopularRecipeViewHolder> {
+public class  PopularRecipeAdapter extends RecyclerView.Adapter<PopularRecipeViewHolder> {
     Context context;
     List<Recipe> list;
 

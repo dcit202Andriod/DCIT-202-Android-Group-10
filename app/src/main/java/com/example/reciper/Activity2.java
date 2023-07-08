@@ -3,10 +3,12 @@ package com.example.reciper;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class Activity2 extends AppCompatActivity {
@@ -34,6 +36,17 @@ public class Activity2 extends AppCompatActivity {
                 }
             }
         });
+
+        ImageButton goToActivityButton = findViewById(R.id.create_account);
+        goToActivityButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Activity2.this, Activity3.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 }
 

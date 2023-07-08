@@ -1,23 +1,27 @@
 package com.example.reciper;
 
+
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
+
+import com.google.android.material.button.MaterialButton;
+
 
 public class Activity7 extends AppCompatActivity {
 
     private static final int NOTIFICATION_ID = 1;
 
-    private Button buttonAll;
-    private Button buttonRead;
-    private Button buttonUnread;
+    private MaterialButton buttonAll;
+    private MaterialButton buttonRead;
+    private MaterialButton buttonUnread;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +50,37 @@ public class Activity7 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 showNotification("Unread");
+            }
+        });
+        // Get references to the ImageButton elements in the tab bar
+        ImageButton homeButton = findViewById(R.id.home);
+        ImageButton searchButton = findViewById(R.id.search);
+        ImageButton notificationButton = findViewById(R.id.notification);
+// Set click listeners for the buttons
+        homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Create an intent to navigate to Activity4
+                Intent intent = new Intent(Activity7.this, Activity4.class);
+                startActivity(intent);
+            }
+        });
+
+        searchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Create an intent to navigate to Activity5
+                Intent intent = new Intent(Activity7.this, Activity5.class);
+                startActivity(intent);
+            }
+        });
+
+        notificationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Create an intent to navigate to Activity7 (or whatever the current activity is)
+                Intent intent = new Intent(Activity7.this, Activity7.class);
+                startActivity(intent);
             }
         });
     }

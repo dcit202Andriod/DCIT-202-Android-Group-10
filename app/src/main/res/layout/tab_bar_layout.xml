@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:id="@+id/rectangle_2"
+        android:layout_width="411dp"
+        android:layout_height="73dp"
+        android:alpha="0.43999999761581"
+        android:background="@drawable/custom_background"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="658dp"
+        android:layout_alignParentBottom="true"/>
+
+    <LinearLayout
+        android:id="@+id/tab_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="653dp"
+        android:layout_alignParentBottom="true">
+
+
+        <ImageButton
+            android:id="@+id/home"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="25dp"
+            android:backgroundTint="#0270B9BE"
+            android:contentDescription="home"
+            android:drawableTint="#6B434141"
+            android:src="@drawable/baseline_home_24"
+
+            />
+
+        <ImageButton
+            android:id="@+id/search"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="74dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="75dp"
+            android:backgroundTint="#0070B9BE"
+            android:contentDescription="search"
+            android:drawableTint="#6B434141"
+            android:src="@drawable/baseline_search_24"
+
+            />
+
+        <ImageButton
+            android:id="@+id/notification"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="#0270B9BE"
+            android:contentDescription="notifications"
+            android:drawableTint="#6B434141"
+            android:src="@drawable/baseline_notifications_24"
+
+            />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -6,18 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".Activity7">
 
-    <View
-        android:id="@+id/rectangle_2"
-        android:layout_width="410dp"
-        android:layout_height="121dp"
-        android:alpha="0.43999999761581"
-        android:background="#70B9BE"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listView"
-        tools:ignore="VisualLintBounds" />
+    <include layout="@layout/tab_bar_layout" />
+
+
+
 
     <TextView
         android:id="@+id/textView"
@@ -30,40 +22,57 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button4"
-        style="@style/Widget.AppCompat.Button.Small"
-        android:layout_width="109dp"
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="90dp"
         android:layout_height="48dp"
-        android:text="@string/all"
-        android:textColor="@color/white"
+        android:id="@+id/button4"
+        android:text="ALL"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        app:cornerRadius="13dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="0dp"
         android:backgroundTint="#042628"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+
         app:layout_constraintEnd_toStartOf="@id/button5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView" />
+        app:layout_constraintTop_toBottomOf="@id/textView"/>
 
-    <Button
-        android:id="@+id/button5"
-        style="@style/Widget.AppCompat.Button.Small"
-        android:layout_width="109dp"
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="90dp"
         android:layout_height="48dp"
-        android:text="@string/read"
+        android:id="@+id/button5"
+        android:text="ALL"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        app:cornerRadius="13dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="0dp"
+        android:backgroundTint="#36868B"
         android:textColor="@color/white"
-        android:backgroundTint="#042628"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toStartOf="@id/button2"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toEndOf="@id/button4"
         app:layout_constraintTop_toBottomOf="@id/textView" />
 
-    <Button
-        android:id="@+id/button2"
-        style="@style/Widget.AppCompat.Button.Small"
-        android:layout_width="109dp"
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="90dp"
         android:layout_height="48dp"
-        android:text="@string/unread"
-        android:textColor="@color/white"
+        android:id="@+id/button2"
+        android:text="ALL"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        app:cornerRadius="13dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="40dp"
         android:backgroundTint="#042628"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toEndOf="@id/button5"
@@ -73,7 +82,6 @@
         android:id="@+id/listView"
         android:layout_width="327dp"
         android:layout_height="496dp"
-        app:layout_constraintBottom_toTopOf="@id/rectangle_2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button5" />

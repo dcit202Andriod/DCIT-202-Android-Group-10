@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 
 import com.example.reciper.Models.MyRecipeData;
 import com.example.reciper.Models.RecipeAdapter;
@@ -15,6 +18,7 @@ public class Activity5 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_5);
+
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -29,6 +33,16 @@ public class Activity5 extends AppCompatActivity {
         };
         RecipeAdapter recipeAdapter = new RecipeAdapter(myRecipeData, Activity5.this);
         recyclerView.setAdapter(recipeAdapter);
+
+
+        ImageButton goToActivityButton = findViewById(R.id.back_button);
+        goToActivityButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Activity5.this, Activity4.class);
+                startActivity(intent);
+            }
+        });
     }
 }
 

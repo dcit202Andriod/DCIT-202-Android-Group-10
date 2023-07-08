@@ -105,7 +105,7 @@
         android:layout_marginEnd="18dp"
         android:layout_marginBottom="21dp"
         android:background="@color/transparent"
-        android:drawableLeft="@drawable/password"
+        android:drawableLeft="@drawable/baseline_key_24"
         android:drawablePadding="20dp"
         android:drawableTint="#92111111"
         android:hint="Enter your Password..."
@@ -171,7 +171,7 @@
         android:text="Login with Google"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:drawableLeft="@drawable/google"
+
         android:paddingStart="55dp"
         android:paddingRight="55dp"
         app:cornerRadius="10dp"

@@ -1,5 +1,12 @@
 package com.example.reciper;
 
+import android.app.ProgressDialog;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -8,9 +15,6 @@ import com.example.reciper.Adapters.PopularRecipeAdapter;
 import com.example.reciper.Listeners.RandomRecipeResponseListener;
 import com.example.reciper.Models.RandomRecipeApiResponse;
 
-import android.app.ProgressDialog;
-import android.os.Bundle;
-import android.widget.Toast;
 
 public class Activity4 extends AppCompatActivity {
 
@@ -30,6 +34,40 @@ public class Activity4 extends AppCompatActivity {
         manager = new RequestManager(this);
         manager.getRandomRecipes(randomRecipeResponseListener);
         dialog.show();
+
+
+        // Get references to the ImageButton elements in the tab bar
+        ImageButton homeButton = findViewById(R.id.home);
+        ImageButton searchButton = findViewById(R.id.search);
+        ImageButton notificationButton = findViewById(R.id.notification);
+
+        // Set click listeners for the buttons
+        homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Create an intent to navigate to Activity4 (or whatever the current activity is)
+                Intent intent = new Intent(Activity4.this, Activity4.class);
+                startActivity(intent);
+            }
+        });
+
+        searchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Create an intent to navigate to Activity5
+                Intent intent = new Intent(Activity4.this, Activity5.class);
+                startActivity(intent);
+            }
+        });
+
+        notificationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Create an intent to navigate to Activity7
+                Intent intent = new Intent(Activity4.this, Activity7.class);
+                startActivity(intent);
+            }
+        });
 
 
 
@@ -52,4 +90,5 @@ public class Activity4 extends AppCompatActivity {
             Toast.makeText(Activity4.this, message, Toast.LENGTH_SHORT).show();
         }
     };
+
 }
