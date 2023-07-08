@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.reciper.Adapters.PopularRecipes.PopularRecipeAdapter;
+import com.example.reciper.Adapters.PopularRecipeAdapter;
 import com.example.reciper.Listeners.RandomRecipeResponseListener;
 import com.example.reciper.Models.RandomRecipeApiResponse;
 
