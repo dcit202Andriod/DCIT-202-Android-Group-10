@@ -1,6 +1,6 @@
 package com.example.reciper;
 
-
+//Imported Dependencies
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
