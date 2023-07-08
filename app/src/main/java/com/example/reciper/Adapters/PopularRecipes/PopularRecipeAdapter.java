@@ -1,4 +1,4 @@
-package com.example.reciper.Adapters;
+package com.example.reciper.Adapters.PopularRecipes;
 
 import android.content.Context;
 import android.view.LayoutInflater;

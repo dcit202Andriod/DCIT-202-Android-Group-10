@@ -14,11 +14,11 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="250dp"
-            android:id="@+id/food_image"/>
+            android:id="@+id/food_image_popular"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:id="@+id/food_name"
+            android:id="@+id/food_name_popular"
             android:layout_gravity="bottom"
             />
     </androidx.cardview.widget.CardView>
