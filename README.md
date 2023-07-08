@@ -1,5 +1,5 @@
 # DCIT-202-Android-Group-10
-Android Group Project
+Android Group Project-Recipe App
 
 Project Overview
 
