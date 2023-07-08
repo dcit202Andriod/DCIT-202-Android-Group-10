@@ -7,140 +7,48 @@
     tools:context=".Activity4"
     android:orientation="vertical">
 
-
-
-
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Home"
         android:id="@+id/home_text"
         android:textSize="40dp"
         android:textStyle="bold"
         android:textAlignment="center"
+        android:layout_gravity="center"
         android:paddingVertical="10dp"
         />
 
-    <LinearLayout
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Popular Recipes 🔥"
+        android:id="@+id/popular_Recipe"
+        android:padding="10dp"
+        android:textStyle="bold"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/popular_Recipe_Recycler"
         android:layout_width="match_parent"
-        android:layout_height="550dp"
-        android:orientation="vertical"
-        android:layout_marginHorizontal="10dp">
+        android:layout_height="150dp"
+        android:layout_marginHorizontal="20dp"
+        android:orientation="horizontal" >
+
+    </androidx.recyclerview.widget.RecyclerView>
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Popular Recipes 🔥"
-            android:id="@+id/popular_Recipe"
-            android:padding="10dp"
-            android:textStyle="bold"/>
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/popular_Recipe_Recycler"
-            android:orientation="horizontal"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            />
+    <Button
+        android:id="@+id/popular_recipe_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:backgroundTint="#042628"
+        android:text="More"
+        android:textAlignment="textEnd" />
 
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginVertical="20dp"
-            android:backgroundTint="#042628"
-            android:id="@+id/view_button_1"
-            android:text="View all"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="17dp"
-            app:cornerRadius="10dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Breakfast Recipes"
-            android:id="@+id/breakfast_recipe"
-            android:padding="10dp"
-            android:textStyle="bold"/>
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            />
-
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="118dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginVertical="20dp"
-            android:backgroundTint="#042628"
-            android:text="View All"
-            android:id="@+id/view_button_2"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="17dp"
-            app:cornerRadius="10dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Lunch Recipes"
-            android:id="@+id/Lunch_recipes"
-            android:padding="10dp"
-            android:textStyle="bold"/>
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            />
-
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="118dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginVertical="20dp"
-            android:backgroundTint="#042628"
-            android:text="View All"
-            android:id="@+id/view_button_3"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="17dp"
-            app:cornerRadius="10dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Dinner Recipes"
-            android:id="@+id/Dinner_recipes"
-            android:padding="10dp"
-            android:textStyle="bold"/>
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            />
-
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="118dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginVertical="20dp"
-            android:backgroundTint="#042628"
-            android:text="View All"
-            android:id="@+id/view_button_4"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="17dp"
-            app:cornerRadius="10dp" />
-    </LinearLayout>
     <include layout="@layout/tab_bar_layout" />
 
 
