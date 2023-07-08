@@ -34,7 +34,9 @@
                 android:padding="5dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/cheeseburger" />
+
+                app:srcCompat="@drawable/cheeseburger"
+                tools:ignore="ContentDescription,MissingConstraints" />
 
             <TextView
                 android:id="@+id/textView6"
@@ -42,11 +44,12 @@
                 android:layout_height="52dp"
                 android:layout_marginStart="16dp"
                 android:text="Cheese Burger"
-                android:textAlignment="left"
+                app:layout_constraintVertical_bias="@android:integer/config_shortAnimTime"
                 android:textSize="30dp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@id/imageView"
-                tools:layout_editor_absoluteY="24dp" />
+                tools:layout_editor_absoluteY="24dp"
+                tools:ignore="MissingConstraints" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
