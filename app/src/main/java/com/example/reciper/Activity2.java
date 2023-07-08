@@ -1,5 +1,7 @@
 package com.example.reciper;
 
+
+//Imported Dependencies
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
