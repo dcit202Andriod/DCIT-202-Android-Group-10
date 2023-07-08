@@ -50,9 +50,9 @@ import java.util.List;
 
         public BreakfastRecipeListViewHolder(@NonNull View itemView) {
             super(itemView);
-            food_Card_breakfast = itemView.findViewById(R.id.food_Card_breakfast);
-            food_image_breakfast = itemView.findViewById(R.id.food_image_breakfast);
-            food_name_breakfast = itemView.findViewById(R.id.food_name_breakfast);
+            food_Card_breakfast = itemView.findViewById(R.id.breakfast_recipes_Card);
+            food_image_breakfast = itemView.findViewById(R.id.breakfast_recipes_image);
+            food_name_breakfast = itemView.findViewById(R.id.breakfast_recipes_image);
         }
     }
 
