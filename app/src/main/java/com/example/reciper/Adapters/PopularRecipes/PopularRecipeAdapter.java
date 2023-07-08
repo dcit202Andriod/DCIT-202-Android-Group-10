@@ -1,4 +1,4 @@
-package com.example.reciper.Adapters;
+package com.example.reciper.Adapters.PopularRecipes;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -32,7 +32,7 @@ public class PopularRecipeAdapter extends RecyclerView.Adapter<PopularRecipeView
     @NonNull
     @Override
     public PopularRecipeViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new PopularRecipeViewHolder(LayoutInflater.from(context).inflate(R.layout.popular_recipes, parent, false));
+        return new PopularRecipeViewHolder(LayoutInflater.from(context).inflate(R.layout.popular_recipes_recycler, parent, false));
 
     }
 
