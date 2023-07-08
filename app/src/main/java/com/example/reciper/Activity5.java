@@ -1,5 +1,6 @@
 package com.example.reciper;
 
+//Imported Dependencies
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
