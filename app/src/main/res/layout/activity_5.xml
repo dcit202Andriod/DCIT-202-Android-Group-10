@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    tools:context=".MainActivity">
+   tools:context=".Activity5">
 
     <TextView
         android:layout_width="wrap_content"
@@ -41,11 +41,7 @@
         android:textSize="20sp"
         tools:ignore="TextSizeCheck" />
 
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <LinearLayout android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_height="wrap_content">
 
@@ -85,7 +81,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
-                        android:text="Recipe Name"/>
+                        android:text="Cheese Burger"
+                        tools:ignore="ExtraText,HardcodedText" />
 
 
 
@@ -115,7 +112,7 @@
                     android:layout_width="63dp"
                     android:layout_height="54dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/cheeseburger"
+                    android:src="@drawable/currynoodles"
                     android:importantForAccessibility="no" />
 
                 <LinearLayout
@@ -133,7 +130,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
-                        android:text="Recipe Name"/>
+                        android:text="Curry Noodles"
+                        tools:ignore="HardcodedText" />
 
 
 
@@ -163,7 +161,7 @@
                     android:layout_width="63dp"
                     android:layout_height="54dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/cheeseburger"
+                    android:src="@drawable/noodles"
                     android:importantForAccessibility="no" />
 
                 <LinearLayout
@@ -181,7 +179,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
-                        android:text="Recipe Name"/>
+                        android:text="Noodles"
+                        tools:ignore="HardcodedText" />
 
 
 
@@ -211,7 +210,7 @@
                     android:layout_width="63dp"
                     android:layout_height="54dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/cheeseburger"
+                    android:src="@drawable/pancakes"
                     android:importantForAccessibility="no" />
 
                 <LinearLayout
@@ -229,7 +228,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
-                        android:text="Recipe Name"/>
+                        android:text="Pan Cakes"
+                        tools:ignore="HardcodedText" />
 
 
 
@@ -258,7 +258,7 @@
                     android:layout_width="63dp"
                     android:layout_height="54dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/cheeseburger"
+                    android:src="@drawable/salad"
                     android:importantForAccessibility="no" />
 
                 <LinearLayout
@@ -276,7 +276,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
-                        android:text="Recipe Name"/>
+                        android:text="Cheese and Shell Salad "
+                        tools:ignore="HardcodedText" />
 
 
 
