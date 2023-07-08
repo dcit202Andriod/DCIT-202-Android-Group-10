@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="search_title">Search</string>
+    <String name="recipe_name">recipe name</String>
     <string name="search_button_label">Search your recipes...</string>
     <string name="search_button_description">Search Button</string>
     <string name="recent_recipes_title">Recent Recipes</string>
     <string name="recent_recipes">Recent Recipes</string>
+
+    <string-array name="recipes_names_full_txt">
+        <item>cheeseBurger</item>
+        <item>RockstarBurger</item>
+        <item>cheeseAndBaconBurger</item>
+        <item>SlackerBurger</item>
+    </string-array>
 
 
 </resources>

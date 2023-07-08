@@ -12,4 +12,8 @@
     <string name="string6">No Account?</string>
     <string name="string7">Create Account</string>
     <string name="string8">Login with Google</string>
+    <string name="api_Key">3b04e2dab63c451c8ebcaf214f6266b3</string>
+    <string name="search">Search</string>
+    <string name="search_your_recipes">search your recipes...</string>
+    <string name="recent_recipes1">Recent Recipes</string>
 </resources>
