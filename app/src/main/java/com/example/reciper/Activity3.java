@@ -1,15 +1,12 @@
 package com.example.reciper;
 
-//Imported Dependencies
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.provider.ContactsContract;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.view.View;
-import android.content.Intent;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -21,69 +18,34 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.button.MaterialButton;
 
 public class Activity3 extends AppCompatActivity {
-    GoogleSignInOptions gso;
-    GoogleSignInClient gsc;
-    ImageView googleBtn;
-
-
+    private static final int RC_SIGN_IN = 1000;
+    private GoogleSignInClient googleSignInClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_3);
 
-        googleBtn = findViewById(R.id.login_google_button);
+        googleSignInClient = GoogleSignIn.getClient(this, GoogleSignInOptions.DEFAULT_SIGN_IN);
 
-
-
-        gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
-        gsc = GoogleSignIn.getClient(this,gso);
-
-           googleBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    signIn();
-                };
-                void signIn() {
-                    Intent signInIntent = gsc.getSignInIntent();
-                    startActivityForResult(signInIntent, 1000);
-
-
-                    Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(Data);
-
-                    try {
-                        task.getResult(ApiException.class);
-                        navigateToSecondActivity();
-
-                    } catch (ApiException e) {
-                        Toast.makeText(getApplicationContext(),"Something went wrong",Toast.LENGTH_SHORT).show();
-                    }
-
-
-                }
-                void navigateToSecondActivity(){
-                    finish();
-                    Intent intent = new Intent(Activity3.this,SecondActivity3.class);
-                    startActivity(intent);
-
-                }
-                });
-
-
-
-
-
-                EditText username = (EditText) findViewById(R.id.Username);
-        MaterialButton createAccount = (MaterialButton) findViewById(R.id.create_account);
-        createAccount.setOnClickListener(new View.OnClickListener(){
+        MaterialButton googleBtn = findViewById(R.id.login_google_button);
+        googleBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
-                String username1 = username.getText().toString();
-                Toast.makeText(Activity3.this,"Username is",Toast.LENGTH_SHORT).show();
+            public void onClick(View view) {
+                signIn();
             }
         });
 
-//intent for back button(It takes you back to Activity2)
+        EditText username = findViewById(R.id.Username);
+        MaterialButton createAccount = findViewById(R.id.create_account);
+        createAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String username1 = username.getText().toString();
+                Toast.makeText(Activity3.this, "Username is " + username1, Toast.LENGTH_SHORT).show();
+            }
+        });
+
         ImageButton goToActivityButton = findViewById(R.id.back_button);
         goToActivityButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,8 +54,31 @@ public class Activity3 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
     }
 
+    private void signIn() {
+        Intent signInIntent = googleSignInClient.getSignInIntent();
+        startActivityForResult(signInIntent, RC_SIGN_IN);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == RC_SIGN_IN) {
+            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
+
+            try {
+                GoogleSignInAccount account = task.getResult(ApiException.class);
+                navigateToSecondActivity();
+            } catch (ApiException e) {
+                Toast.makeText(getApplicationContext(), "Something went wrong", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    private void navigateToSecondActivity() {
+        Intent intent = new Intent(Activity3.this, SecondActivity3.class);
+        startActivity(intent);
+        finish();
+    }
 }
