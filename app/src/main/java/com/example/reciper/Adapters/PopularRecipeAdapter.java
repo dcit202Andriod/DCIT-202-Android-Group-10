@@ -73,7 +73,7 @@ class PopularRecipeViewHolder extends RecyclerView.ViewHolder {
 
     public PopularRecipeViewHolder(@NonNull View itemView) {
         super(itemView);
-        food_Card_popular = itemView.findViewById(R.id.food_Card_popular);
+        food_Card_popular = itemView.findViewById(R.id.popular_Recipe_Card);
         food_image_popular = itemView.findViewById(R.id.food_image_popular);
         food_name_popular = itemView.findViewById(R.id.food_name_popular);
 
