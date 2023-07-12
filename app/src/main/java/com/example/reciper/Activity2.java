@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Activity2 extends AppCompatActivity {
@@ -39,7 +40,7 @@ public class Activity2 extends AppCompatActivity {
             }
         });
 //Intent for the button'Create Account'(It takes you to activity3)
-        ImageButton goToActivityButton = findViewById(R.id.create_account);
+        TextView goToActivityButton = findViewById(R.id.create_account);
         goToActivityButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
