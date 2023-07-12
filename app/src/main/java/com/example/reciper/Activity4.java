@@ -11,10 +11,12 @@ import com.example.reciper.Models.RandomRecipeApiResponse;
 import com.example.reciper.Models.Recipe;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -54,6 +56,39 @@ public class Activity4 extends AppCompatActivity {
         manager = new RequestManager(this);
 //        manager.getRandomRecipes(randomRecipeResponseListener);
 //        dialog.show();
+
+
+        ImageButton homeButton = findViewById(R.id.home);
+        ImageButton searchButton = findViewById(R.id.search);
+        ImageButton notificationButton = findViewById(R.id.notification);
+        // Set click listeners for the buttons
+        homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Create an intent to navigate to Activity4 (or whatever the current activity is)
+                Intent intent = new Intent(Activity4.this, Activity4.class);
+                startActivity(intent);
+            }
+        });
+
+        searchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Create an intent to navigate to Activity5
+                Intent intent = new Intent(Activity4.this, Activity5.class);
+                startActivity(intent);
+            }
+        });
+
+        notificationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Create an intent to navigate to Activity7
+                Intent intent = new Intent(Activity4.this, Activity7.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     private final RandomRecipeResponseListener randomRecipeResponseListener= new RandomRecipeResponseListener() {
