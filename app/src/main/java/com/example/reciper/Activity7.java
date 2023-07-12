@@ -65,15 +65,15 @@ public class Activity7 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-        searchButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Create an intent to navigate to Activity5
-                Intent intent = new Intent(Activity7.this, Activity5.class);
-                startActivity(intent);
-            }
-        });
+//tab from activity7 to Activity5
+//        searchButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                // Create an intent to navigate to Activity5
+//                Intent intent = new Intent(Activity7.this, Activity5.class);
+//                startActivity(intent);
+//            }
+//        });
 
         notificationButton.setOnClickListener(new View.OnClickListener() {
             @Override

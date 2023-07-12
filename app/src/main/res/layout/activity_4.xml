@@ -36,7 +36,7 @@
             android:textStyle="bold"/>
         <Spinner
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_gravity="center"
             android:id="@+id/spinner_tags"
             android:layout_alignParentEnd="true"
