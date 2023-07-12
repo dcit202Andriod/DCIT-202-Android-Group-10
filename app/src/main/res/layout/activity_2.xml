@@ -123,7 +123,7 @@
         android:layout_height="70dp"
         android:id="@+id/login_button"
         android:layout_below="@+id/password_card"
-        android:text="Login"
+        android:text="@string/string1"
         android:textSize="20sp"
         android:textStyle="bold"
         app:cornerRadius="10dp"
