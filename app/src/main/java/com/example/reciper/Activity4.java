@@ -1,6 +1,7 @@
 package com.example.reciper;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -31,6 +32,7 @@ public class Activity4 extends AppCompatActivity {
     RecyclerView recyclerView;
     Spinner spinner;
     List<String> tags = new ArrayList<String>();
+    SearchView searchView;
 
 
 
@@ -42,6 +44,23 @@ public class Activity4 extends AppCompatActivity {
 
         dialog = new ProgressDialog(this);
         dialog.setTitle("Loading...");
+
+        searchView = findViewById(R.id.search_recipe_bar);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                tags.clear();
+                tags.add(query);
+                manager.getRandomRecipes(randomRecipeResponseListener, tags);
+                dialog.show();
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
 
         spinner = findViewById(R.id.spinner_tags);
         ArrayAdapter arrayAdapter = ArrayAdapter.createFromResource(
@@ -75,7 +94,7 @@ public class Activity4 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Create an intent to navigate to Activity5
-                Intent intent = new Intent(Activity4.this, Activity5.class);
+                Intent intent = new Intent(Activity4.this, Activity4.class);
                 startActivity(intent);
             }
         });
