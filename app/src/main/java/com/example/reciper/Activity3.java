@@ -61,24 +61,24 @@ public class Activity3 extends AppCompatActivity {
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == RC_SIGN_IN) {
-            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//        if (requestCode == RC_SIGN_IN) {
+//            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
+//
+//            try {
+//                GoogleSignInAccount account = task.getResult(ApiException.class);
+//                 navigateToSecondActivity();
+//            } catch (ApiException e) {
+//                Toast.makeText(getApplicationContext(), "Something went wrong", Toast.LENGTH_SHORT).show();
+//            }
+//        }
+//    }
 
-            try {
-                GoogleSignInAccount account = task.getResult(ApiException.class);
-                navigateToSecondActivity();
-            } catch (ApiException e) {
-                Toast.makeText(getApplicationContext(), "Something went wrong", Toast.LENGTH_SHORT).show();
-            }
-        }
-    }
-
-    private void navigateToSecondActivity() {
-        Intent intent = new Intent(Activity3.this, SecondActivity3.class);
-        startActivity(intent);
-        finish();
-    }
+//    private void navigateToSecondActivity() {
+//        Intent intent = new Intent(Activity3.this, SecondActivity3.class);
+//        startActivity(intent);
+//        finish();
+//    }
 }
